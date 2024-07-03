@@ -1,0 +1,28 @@
+<body>
+  <div class="login-under">
+    <div class="container">
+      <form [formGroup]="contactForm" class="row g-3 needs-validation" novalidate (submit)="enviar($event)">
+        <div class="mb-3">
+          <label for="correo" class="form-label">Correo</label>
+          <input type="email" class="form-control" id="correo" placeholder="Ingrese correo" formControlName="correo"
+            [ngClass]="{'is-invalid' : hasErrors('correo', 'required') || hasErrors('correo', 'minlength')}">
+          <div *ngIf="hasErrors('correo', 'required')" class="text-danger">Correo requerido</div>
+          <div *ngIf="hasErrors('correo', 'email')" class="text-danger">Correo no es valido</div>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Ingrese Password" formControlName="password"
+            [ngClass]="{'is-invalid' : hasErrors('password', 'required') || hasErrors('password', 'minlength')}">
+          <div *ngIf="hasErrors('password', 'required')" class="text-danger">Complete este campo</div>
+          <div *ngIf="hasErrors('password', 'minlength')" class="text-danger">Debe tener al menos 6 caracteres</div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Log in</button>
+        </div>
+      </form>
+      <a class="register" routerLink="/register" (click)="onOption('/register')">Registrarse</a>
+      <br>
+      <a class="register" (click)="resetPass()"> Resetear contraseña</a>
+    </div>
+  </div>
+</body>

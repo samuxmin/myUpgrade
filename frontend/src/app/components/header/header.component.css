@@ -1,0 +1,328 @@
+* {
+  box-sizing: border-box;
+}
+
+
+.clearfix {
+  clear: both;
+}
+
+.header-banner {
+
+  color: #ffffff;
+  font-family: Helvetica, serif;
+  font-weight: 100;
+  background-image: url('/myupgrade/assets/img/gradient.png'),
+    url("https://media.extron.com/public/landing/content/esports/equipment_1.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  background-position: bottom, center; /* Posiciona las imágenes desde la parte inferior */
+  height: 500;
+}
+
+.header-banner-login {
+  background: #222222;
+  height: 45px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.container-width {
+  width: 90%;
+  margin:auto;
+  padding-bottom: 20px;
+}
+
+.menu {
+
+}
+
+.menu-item {
+  float: right;
+  font-size: 15px;
+  color: #eee;
+  width: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-height: 50px;
+  text-align: center;
+  line-height: 30px;
+  font-weight: 400;
+  text-decoration: none;
+  user-select: none;
+}
+
+.lead-title {
+  margin: 150px 0 30px 0;
+  font-size: 40px;
+}
+
+.sub-lead-title {
+  max-width: 650px;
+  line-height: 30px;
+  margin-bottom: 30px;
+  color: #c6c6c6;
+}
+
+.lead-btn {
+  margin-top: 15px;
+  padding: 10px;
+  width: 190px;
+  min-height: 30px;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 3px;
+  line-height: 30px;
+  background-color: #d983a6;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.lead-btn:hover {
+  background-color: #ffffff;
+  color: #4c114e;
+}
+
+.lead-btn:active {
+  background-color: #4d114f;
+  color: #fff;
+}
+
+#img-logo {
+  color: black;
+  width: 40px;
+}
+
+.container-width nav {
+  display: flex;
+  flex-direction: row;
+  background-color: #31283396;
+
+  height: 40px;
+}
+
+.nav-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 80%;
+}
+
+.nav-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 20%;
+}
+
+.cart-icon a {
+  color: #ffffff;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.cart-icon a:hover {
+  color: #007bff;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.user-icon img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #22222249;
+  color: white;
+  min-width: 180px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.dropdown-content ul {
+  background-color: #2222224d;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-content li {
+  padding: 10px;
+  text-decoration: none;
+  user-select: none;
+}
+
+.dropdown-content li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+
+.dropdown-content li a:hover {
+  background-color: #f1f1f15d;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content-0 {
+  display: none;
+}
+
+.dropdown-content-0 ul {
+  background-color: #2222224d;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-content-0 li {
+  padding: 10px;
+}
+
+.dropdown-content-0 li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content-0 li a:hover {
+  background-color: #f1f1f15d;
+}
+
+.dropdown:hover .dropdown-content-0 {
+  display: block;
+}
+
+.logo img {
+  height: 40px;
+  width: 40px;
+}
+
+.nav-links a {
+  color: #ffffff;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+.logo-text {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.nav-text{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  display:inline-block
+}
+
+.logo-container {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+a {
+  cursor: pointer;
+}
+
+
+.busqueda {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+}
+
+.sub-input-personal {
+  width: 200px;
+  height: 30px;
+  border-radius: 2px;
+  color: #fff;
+  background-color: #554c57;
+  border-color: #554c57;
+}
+
+.sub-btn-personal {
+  height: 29px;
+  width: 70px;
+  background-color: #785580;
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+  border-color: #554c57;
+}
+
+@media (max-width: 1024px) {
+  .busqueda {
+    justify-content: end;
+
+  }
+
+  .sub-input-personal {
+    width: 100px;
+  }
+
+  .sub-btn-personal {
+    width: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .busqueda {
+    justify-content: end;
+
+  }
+
+  .sub-input-personal {
+    width: 100px;
+  }
+
+  .sub-btn-personal {
+    width: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo-text {
+    display: none;
+  }
+
+  .busqueda {
+    justify-content: end;
+
+  }
+
+  .sub-input-personal {
+
+    margin-bottom: 5px;
+  }
+
+  .sub-btn-personal {
+
+  }
+}
+
+

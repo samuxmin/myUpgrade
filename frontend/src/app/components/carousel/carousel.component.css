@@ -1,0 +1,51 @@
+
+.container-width {
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+.am-pre {
+    padding: 7px;
+    color: #b1b1b1;
+    font-size: 15px;
+}
+
+.am-title {
+    padding: 7px;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.am-desc {
+    padding: 7px;
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.am-post {
+    padding: 7px;
+    line-height: 25px;
+    font-size: 13px;
+}
+.am-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#image-promo {
+    color: black;
+    max-width: 80vw;
+}
+
+.margin-btw-components{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon{
+    background-color: #000;
+    border-radius: 10px;
+  }

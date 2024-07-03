@@ -1,0 +1,14 @@
+{
+
+    "/api/**":{
+    "target": "https://tallerphp.uy",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+
+        
+
+    }
+    }
+
+}

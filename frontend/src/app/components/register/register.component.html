@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="login-under">
+        <div class="container">
+            <form [formGroup]="contactForm" class="row g-3 needs-validation" novalidate (submit)="enviar($event)">
+                <div class="mb-3">
+                <label for="correo" class="form-label">Correo</label>
+                <input type="email" class="form-control" id="correo" placeholder="Ingrese correo" formControlName="correo"
+                        [ngClass]="{'is-invalid' : hasErrors('correo', 'required') || hasErrors('correo', 'email') || hasErrors('correo', 'emailExists')}">
+                  <div *ngIf="hasErrors('correo', 'required')" class="text-danger">Correo requerido</div>
+                  <div *ngIf="hasErrors('correo', 'email')" class="text-danger">Correo no es válido</div>
+                  <div *ngIf="hasErrors('correo', 'emailExists')" class="text-danger">El correo ya está registrado</div>
+                </div>
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Ingrese Nombre"
+                        formControlName="nombre"
+                        [ngClass]="{'is-invalid' : hasErrors('nombre', 'required') || hasErrors('nombre', 'minlength')}">
+                    <div *ngIf="hasErrors('nombre', 'required')" class="text-danger">Complete este campo</div>
+                    <div *ngIf="hasErrors('nombre', 'minlength')" class="text-danger">Debe tener al menos 4 caracteres
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="apellido" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" placeholder="Ingrese Apellido"
+                        formControlName="apellido"
+                        [ngClass]="{'is-invalid' : hasErrors('apellido', 'required') || hasErrors('apellido', 'minlength')}">
+                    <div *ngIf="hasErrors('apellido', 'required')" class="text-danger">Complete este campo</div>
+                    <div *ngIf="hasErrors('apellido', 'minlength')" class="text-danger">Debe tener al menos 4 caracteres
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Ingrese Password"
+                        formControlName="password"
+                        [ngClass]="{'is-invalid' : hasErrors('password', 'required') || hasErrors('password', 'minlength')}">
+                    <div *ngIf="hasErrors('password', 'required')" class="text-danger">Complete este campo</div>
+                    <div *ngIf="hasErrors('password', 'minlength')" class="text-danger">Debe tener al menos 6 caracteres
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="foto" class="form-label">Foto (opcional)</label>
+                    <input type="file" class="form-control" id="foto" formControlName="foto" accept="image/*" (change)="onFileChange($event)">
+                  </div>
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Registrarse</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
+

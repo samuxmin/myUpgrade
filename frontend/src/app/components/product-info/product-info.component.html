@@ -1,0 +1,43 @@
+
+<body>
+  <div class="container">
+    <div *ngIf="loading">
+        <h5>Loading...</h5>
+    </div>
+    <div *ngIf="!loading && product">
+        <div class="product-card">
+            <div class="product-image">
+                <img style="max-width: 400px;" [src]="imgUrl + product.imagen" [alt]="product.nombre">
+            </div>
+            <div class="product-details">
+                <h5 class="product-title">{{product.nombre}}</h5>
+                <h4 class="product-price">{{product.precio | currency}}</h4>
+                <h5>Descripcion</h5>
+                <p class="product-description">{{product.descripcion}}</p>
+                <p class="product-category">Categoría: {{product.categoria}}</p>
+                <p class="product-stock">{{product.stock}} disponibles</p>
+                <div *ngIf="product.categoria === 'PC'">
+                    <strong>Componentes:</strong>
+                    <ul>
+                        <li *ngFor="let c of product.componentes" >
+                            <a [routerLink]="['/producto', c.id]">{{c.nombre}}</a>
+
+                        </li>
+                    </ul>
+            <div *ngIf="isLogged() && !isAdmin">
+
+                <div  class="cantidad">
+                <input *ngIf="product.id" [id]="'quantity-' + product.id" min="1" max="{{product.stock}}" name="quantity"
+                    [(ngModel)]="quantities[product.id]" type="number" class="form-control form-control-sm" />
+                </div>
+                <div class="carrito">
+                    <button *ngIf="product.id" (click)="addToCart(product.id)" class="btn btn-primary"><i
+                            class="fa fa-shopping-cart"></i>Agregar al carrito</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+</body>

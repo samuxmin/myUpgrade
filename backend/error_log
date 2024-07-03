@@ -1,0 +1,21 @@
+[27-Jun-2024 22:33:06 UTC] PHP Parse error:  Unclosed '{' on line 8 in /home/hphp/public_html/myupgrade/backend/UsuarioService.php on line 376
+[27-Jun-2024 22:33:36 UTC] PHP Parse error:  Unclosed '{' on line 8 in /home/hphp/public_html/myupgrade/backend/UsuarioService.php on line 376
+[27-Jun-2024 22:35:03 UTC] Se envio el email correctamente
+[27-Jun-2024 22:35:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function enviarMail() in /home/hphp/public_html/myupgrade/backend/UsuarioService.php:275
+Stack trace:
+#0 /home/hphp/public_html/myupgrade/backend/api.php(144): UsuarioService->resetearPass()
+#1 /home/hphp/public_html/myupgrade/backend/api.php(67): handleUsuarioRequest()
+#2 /home/hphp/public_html/myupgrade/backend/api.php(17): handlePostRequest()
+#3 {main}
+  thrown in /home/hphp/public_html/myupgrade/backend/UsuarioService.php on line 275
+[27-Jun-2024 22:38:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function enviarMail() in /home/hphp/public_html/myupgrade/backend/UsuarioService.php:275
+Stack trace:
+#0 /home/hphp/public_html/myupgrade/backend/api.php(144): UsuarioService->resetearPass()
+#1 /home/hphp/public_html/myupgrade/backend/api.php(67): handleUsuarioRequest()
+#2 /home/hphp/public_html/myupgrade/backend/api.php(17): handlePostRequest()
+#3 {main}
+  thrown in /home/hphp/public_html/myupgrade/backend/UsuarioService.php on line 275
+[27-Jun-2024 22:40:01 UTC] Se envio el email correctamente
+[27-Jun-2024 22:40:26 UTC] Se envio el email correctamente
+[27-Jun-2024 22:40:40 UTC] Se envio el email correctamente
+[27-Jun-2024 22:42:31 UTC] Se envio el email correctamente

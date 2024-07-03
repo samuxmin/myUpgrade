@@ -1,0 +1,101 @@
+<div class="container-width">
+  <div class="busqueda">
+    <input type="text" name="searchText" [(ngModel)]="searchText" placeholder="buscar" class="sub-input-personal"
+      id="imo1tz" (keyup.enter)="onSearch()" />
+    <button type="button" class="sub-btn-personal" (click)="onSearch()">buscar</button>
+  </div>
+</div>
+<!-- HEADER -->
+<header id="iswm-2" class="header-banner"
+  [ngClass]="{'header-banner-login': currentRoute === '/login' || currentRoute === '/register' || isProductoRoute() || currentRoute === '/admin' || currentRoute === '/modificar' || currentRoute === '/carrito'}">
+
+  <div id="ipvi-2" class="container-width">
+    <nav id="iqwh-2" class="menu">
+      <div class="nav-left d-flex align-items-center justify-content-start">
+        <div routerLink="/" routerLinkActive="active" (click)="onOption('/')" class="logo-container">
+          <img id="img-logo" src="./assets/img/logo.png" width="40px" /><span class="logo-text">myUpgrade</span>
+        </div>
+
+        <div class="dropdown menu-item nav-text">
+          <span class="dropdown-toggle nav-text" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Productos
+          </span>
+          <ul class="dropdown-menu">
+            <li><a class="animateanimated animatejackInTheBox dropdown-item" routerLink="/producto"
+                (click)="onOption('/producto')">Todos</a></li>
+            <li><a class="animateanimated animatejackInTheBox dropdown-item" routerLink="/producto/componentes"
+                (click)="onOption('/producto/componentes')">Componentes</a></li>
+            <li> <a class="animateanimated animatejackInTheBox dropdown-item" routerLink="/producto/pc"
+                (click)="onOption('/producto/pc')">PCs</a></li>
+            <li><a class="animateanimated animatejackInTheBox dropdown-item" routerLink="/producto/perifericos"
+                (click)="onOption('/producto/perifericos')">Periféricos</a></li>
+            <li><a class="animateanimated animatejackInTheBox dropdown-item" routerLink="/producto/notebooks"
+                (click)="onOption('/producto/notebooks') ">Notebooks</a></li>
+          </ul>
+        </div>
+
+
+        <a (click)="scrollToFooter()" class="menu-item nav-text">Contacto</a>
+      </div>
+
+      <div class="nav-right">
+
+
+        <div class="cart-icon menu-item" *ngIf="isLogged() && !isAdmin">
+          <a routerLink="/carrito" [ngClass]="{active: menuOption == 'carrito'}" (click)="onOption('carrito')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart"
+              viewBox="0 0 16 16">
+              <path
+                d="M0 1.5A.5.5 0 0 1 .5 1h1a.5.5 0 0 1 .485.379L2.89 5H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 14H4a.5.5 0 0 1-.491-.408L.61 1.607 0 1.5zM3.102 6l1.313 7h7.17l1.313-7H3.102zM5.5 16a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm6 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="dropdown">
+          <div class="user-icon dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="{{image}}" />
+          </div>
+          <ul class="dropdown-menu">
+            <li class="nav-item dropdown-item" *ngIf="!isLogged()">
+              <a class="nav-link" routerLink="/login" [class.active]="menuOption === 'login'"
+                (click)="onOption('login')">Login</a>
+            </li>
+            <li class="nav-item dropdown-item" *ngIf="!isLogged()">
+              <a class="nav-link" routerLink="/register" [class.active]="menuOption === 'register'"
+                (click)="onOption('register')">Register</a>
+            </li>
+            <li class="nav-item dropdown-item" *ngIf="isLogged()">
+              <a class="nav-link" routerLink="/modificar" [class.active]="menuOption === 'modificar'"
+                (click)="onOption('modificar')">Modificar Usuario</a>
+            </li>
+            <li class="nav-item dropdown-item" *ngIf="isLogged() && isAdmin">
+              <a class="nav-link" routerLink="/admin" [class.active]="menuOption === 'admin'"
+                (click)="onOption('admin')">Panel Administración</a>
+            </li>
+            <li class="nav-item dropdown-item" *ngIf="isLogged()">
+              <a class="nav-link" (click)="logout()">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="clearfix">
+    </div>
+    <div *ngIf="['/', '/home',''].includes(currentRoute)">
+      <div id="ivwqj-2" class="lead-title">El futuro del gaming
+        <br />
+      </div>
+      <div id="i6kwa-2" class="sub-lead-title">Conoce las ultimas inovaciones en componentes de PC, actualiza tu PC a lo
+        mas nuevo en el mercado.
+        <br />
+      </div>
+      <button id="ij4a1-2" class="lead-btn" routerLink="/producto/componentes"
+        (click)="onOption('/producto/componentes')"> Saber más
+        <br />
+      </button>
+    </div>
+  </div>
+
+
+</header>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="foot-form-title d-flex justify-content-center" id="title-crear">CREAR PRODUCTO</div>
+  <div class="login-under">
+    <div class="container">
+      <form [formGroup]="contactForm" class="row g-3 needs-validation" novalidate (submit)="enviar($event)">
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" placeholder="Ingrese Nombre" formControlName="nombre"
+            [ngClass]="{'is-invalid' : hasErrors('nombre', 'required')}">
+          <div *ngIf="hasErrors('nombre', 'required')" class="text-danger">Complete este campo</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="stock" class="form-label">Stock</label>
+          <input type="number" class="form-control" id="stock" placeholder="Ingrese las unidades" formControlName="stock"
+            [ngClass]="{'is-invalid' : hasErrors('stock', 'required') || hasErrors('stock', 'min')}">
+          <div *ngIf="hasErrors('stock', 'required')" class="text-danger">Complete este campo</div>
+          <div *ngIf="hasErrors('stock', 'min')" class="text-danger">El stock debe ser al menos 1</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="precio" class="form-label">Precio</label>
+          <input type="number" class="form-control" id="precio" placeholder="Ingrese el precio" formControlName="precio"
+            [ngClass]="{'is-invalid' : hasErrors('precio', 'required')}">
+          <div *ngIf="hasErrors('precio', 'required')" class="text-danger">Complete este campo</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="descripcion" class="form-label">Descripcion</label>
+          <textarea class="form-control" rows="5" id="descripcion" placeholder="Ingrese la descripcion del producto"
+            formControlName="descripcion" [ngClass]="{'is-invalid' : hasErrors('descripcion', 'required')}"></textarea>
+          <div *ngIf="hasErrors('descripcion', 'required')" class="text-danger">Complete este campo</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="categoria" class="form-label">Categoría</label>
+          <select class="form-select" aria-label="Default select example" formControlName="categoria"
+            [ngClass]="{'is-invalid' : hasErrors('categoria', 'required')}">
+            <option value="" disabled selected>Elige la categoria</option>
+            <option value="NOTEBOOKS">Notebooks</option>
+            <option value="PC">Pc</option>
+            <option value="COMPONENTES">Componentes</option>
+            <option value="PERIFERICOS">Perifericos</option>
+          </select>
+          <div *ngIf="hasErrors('categoria', 'required')" class="text-danger">Seleccione una categoría</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="foto" class="form-label">Foto</label>
+          <input type="file" class="form-control" id="foto" accept="image/*" formControlName="foto" (change)="onFileChange($event)">
+          <div *ngIf="hasErrors('foto', 'required')" class="text-danger">Seleccione una imagen</div>
+        </div>
+
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Publicar Producto</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>

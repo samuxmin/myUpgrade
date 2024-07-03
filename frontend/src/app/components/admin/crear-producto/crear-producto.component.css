@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+html{
+background-color: #22222200;
+color: white;
+}
+
+body {
+  background-color: #00000000;
+  color: white;
+}
+
+
+.header-banner-login{
+background: #222222;
+height: 60px;
+padding-top: 15px;
+padding-bottom: 15px;
+}
+
+
+.foot-form-title {
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 400;
+  margin-bottom: 10px;
+  padding: 0.5em 0;
+  text-align: right;
+  font-size: 1.5em;
+}
+
+
+.container-width nav{
+  display: flex;
+  flex-direction: row;
+  background-color: #31283396;
+  width: 100%;
+  height: 40px;
+}
+
+.nav-left{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 50%;
+}
+
+.nav-right{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .foot-form-cont {
+      width: 400px;
+  }
+
+  .foot-form-title {
+      width: autopx;
+  }
+}

@@ -1,0 +1,241 @@
+/* BODY CON IMAGEN QUE SOLO SE REPITE EN EL EJE Y*/
+.body-products {
+  background-image:
+    url('/myupgrade/assets/img/products-gradient.png'),
+    url("https://media.extron.com/public/landing/content/esports/equipment_1.jpg");
+
+  background-size: auto 100%, contain;
+  background-position: center, center;
+}
+
+.navbar .logo img {
+    height: 40px;
+}
+
+.nav-links a {
+    display: flex;
+    margin: 0 10px;
+    text-decoration: none;
+    align-items: center;
+    color: #000;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+.search-container button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-left: 0;
+    background-color: #007bff;
+    color: white;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #0056b3;
+}
+
+.navbar .nav-right .cart-icon,
+.navbar .nav-right .user-icon {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.navbar .nav-right .cart-icon svg,
+.navbar .nav-right .user-icon img {
+    height: 30px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.secondary-navbar a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.secondary-navbar a:hover {
+    color: #d1ecf1;
+}
+
+.nav-links a:hover {
+    animation-name: jackInTheBox;
+    animation-duration: 0.5s;
+}
+
+.section-tab-nav .tab-nav li a {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.section-tab-nav .tab-nav li.active a {
+    color: #007bff;
+}
+
+
+.product {
+    padding: 20px;
+    border: 1px solid #eee;
+    text-align: center;
+    width: 220px;
+    margin: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+
+.product-img img {
+    max-width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+}
+
+
+.product-body {
+    margin-top: 15px;
+    width: 100%;
+}
+
+
+.product-category {
+    font-size: 12px;
+    color: #888;
+}
+
+
+.product-name a {
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+}
+
+
+.product-price {
+    font-size: 18px;
+    color: #e74c3c;
+    margin-top: 5px;
+}
+
+
+.product-description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-height: 1.5em;
+    margin-top: 10px;
+}
+
+
+.product-btns {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.product-btns button {
+    background-color: transparent;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.product-btns button:hover {
+    color: #007bff;
+}
+
+
+.product-cart-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.product-cart-actions .add-to-cart-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+
+.product-cart-actions .add-to-cart-btn:hover {
+    background-color: #0056b3;
+}
+
+.product-cart-actions input[type="number"] {
+    width: 60px;
+    text-align: center;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.products-slick {
+    position: relative;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.products-slick::-webkit-scrollbar {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .product {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+.add-to-cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+
+.col-md-12 {
+    min-height: 100vh;
+    padding-top: 150px;
+    padding-bottom: 150px;
+
+
+}

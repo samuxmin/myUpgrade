@@ -1,0 +1,50 @@
+
+<body>
+  <div class="foot-form-title d-flex justify-content-center" id="title-crear">Panel de Administrador</div>
+  <div class="admin-under">
+    <div class="container">
+
+      <div class="accordion low-opacity" id="admin-panel">
+        <div class="accordion-item low-opacity">
+          <h2 class="accordion-header" id="crear-producto">
+            <button class="accordion-button low-opacity-pricipal" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+              Crear Producto
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="crear-producto" data-bs-parent="#admin-panel">
+            <div class="accordion-body">
+              <admin-crear-producto></admin-crear-producto>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item low-opacity">
+          <h2 class="accordion-header" id="modificar-producto">
+            <button class="accordion-button low-opacity-pricipal collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+              Modificar Producto
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="modificar-producto" data-bs-parent="#admin-panel">
+            <div class="accordion-body">
+              <admin-modificar-producto></admin-modificar-producto>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item low-opacity">
+          <h2 class="accordion-header" id="eliminar-producto">
+            <button class="accordion-button low-opacity-pricipal collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+              Eliminar Producto
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="eliminar-producto" data-bs-parent="#admin-panel">
+            <div class="accordion-body">
+              <admin-eliminar-producto></admin-eliminar-producto>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>

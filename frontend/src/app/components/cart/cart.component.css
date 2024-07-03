@@ -1,0 +1,28 @@
+html{
+  background-color: #222222;
+  color: white;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #222222;
+    color: white;
+}
+
+.card-black{
+    background-color: #453f4a;
+    color: white;
+
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+-moz-appearance: textfield;
+appearance: textfield;
+}

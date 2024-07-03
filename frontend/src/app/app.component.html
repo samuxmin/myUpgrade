@@ -1,0 +1,13 @@
+
+
+
+  <app-header></app-header>
+
+  <div class="margin-btw-components">
+    <router-outlet></router-outlet>
+  </div>
+
+  <app-carousel *ngIf="['/', '/home',''].includes(currentRoute)"></app-carousel>
+
+  <app-categorias *ngIf="['/', '/home',''].includes(currentRoute)"></app-categorias>
+  <app-footer ></app-footer>

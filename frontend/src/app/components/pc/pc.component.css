@@ -1,0 +1,206 @@
+
+.navbar .logo img {
+    height: 40px;
+}
+
+.nav-links a {
+    display: flex;
+    margin: 0 10px;
+    text-decoration: none;
+    align-items: center;
+    color: #000;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+
+.search-container button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-left: 0;
+    background-color: #007bff;
+    color: white;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #0056b3;
+}
+
+
+
+.navbar .nav-right .cart-icon,
+.navbar .nav-right .user-icon {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.navbar .nav-right .cart-icon svg,
+.navbar .nav-right .user-icon img {
+    height: 30px;
+}
+
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.secondary-navbar a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.secondary-navbar a:hover {
+    color: #d1ecf1;
+}
+
+.nav-links a:hover {
+    animation-name: jackInTheBox;
+    animation-duration: 0.5s;
+}
+
+
+.section-tab-nav .tab-nav li a {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.section-tab-nav .tab-nav li.active a {
+    color: #007bff;
+}
+
+.products-slick {
+    position: relative;
+    margin-top: 30px;
+}
+
+.products-slick .product {
+    padding: 20px;
+    border: 1px solid #eee;
+    text-align: center;
+}
+
+.products-slick .product-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.products-slick .product-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.products-slick .product-label .new {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.products-slick .product-label .sale {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.products-slick .product-body {
+    margin-top: 15px;
+}
+
+.products-slick .product-body .product-category {
+    font-size: 14px;
+    color: #777;
+}
+
+.products-slick .product-body .product-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.products-slick .product-body .product-name a {
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.products-slick .product-body .product-name a:hover {
+    color: #007bff;
+}
+
+.products-slick .product-body .product-price {
+    font-size: 16px;
+    font-weight: 600;
+    color: #007bff;
+    margin-top: 5px;
+}
+
+.products-slick .product-body .product-rating {
+    margin-top: 10px;
+}
+
+.products-slick .product-body .product-rating i {
+    color: #ffc107;
+}
+
+.products-slick .product-body .product-btns {
+    margin-top: 20px;
+}
+
+.products-slick .product-body .product-btns button {
+    background-color: transparent;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 20px;
+}
+
+.products-slick .product-body .product-btns button:hover {
+    color: #007bff;
+}
+
+.products-slick .add-to-cart {
+    margin-top: 20px;
+}
+
+.products-slick .add-to-cart .add-to-cart-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.products-slick .add-to-cart .add-to-cart-btn:hover {
+    background-color: #0056b3;
+}
+
+.products-container {
+    display: flex; /* Usa flexbox */
+    justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+.product {
+    width: 200px; /* Ajusta el ancho de cada producto */
+    margin: 0 10px; /* Espacio entre los productos */
+}

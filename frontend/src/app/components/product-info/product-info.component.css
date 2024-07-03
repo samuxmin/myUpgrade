@@ -1,0 +1,149 @@
+body{
+  min-height: 100vh;
+  background-color: hsl(0, 0%, 13%);
+  background-image: url('/myupgrade/assets/img/products-gradient.png'),
+    url("https://media.extron.com/public/landing/content/esports/equipment_1.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+  color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 55vh;
+
+    padding: 16px; /* Añadido padding para márgenes en pantallas pequeñas */
+    box-sizing: border-box;
+}
+
+.col-md-12{
+  min-height: 100vh;
+  background-color: hsl(0, 0%, 13%);
+  background-image: url('/myupgrade/assets/img/products-gradient.png'),
+    url("https://media.extron.com/public/landing/content/esports/equipment_1.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+  }
+
+.product-card {
+    display: flex;
+    flex-direction: column; /* Cambiado de row a column para pantallas pequeñas */
+    background-color: #1c1c1c;
+    color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 1100px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    flex: 0 0 auto; /* Ajustado flex para adaptarse mejor en pantallas pequeñas */
+    background-color: #fff;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.product-image:hover img {
+    transform: scale(1.2);
+}
+
+.product-details {
+    flex: 1;
+    padding-left:50px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-right: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-title {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.product-price {
+    font-size: 1.25em;
+    margin-bottom: 1em;
+    color: #4caf50;
+}
+
+.product-description,
+.product-category {
+    margin-bottom: 1em;
+}
+
+.product-category {
+    font-weight: bold;
+}
+
+.product-details ul {
+    padding-left: 1.5em;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin-top: auto;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.carrito {
+    margin-top: 30px;
+    display: flex;
+}
+
+.cantidad {
+    display: flex;
+    margin-right: auto; /* Ajustado para alinear correctamente en pantallas pequeñas */
+}
+
+/* Media queries para responsividad */
+@media (min-width: 600px) {
+
+
+    .product-image {
+        flex: 0 0 300px;
+    }
+}
+
+@media (max-width: 599px) {
+    .product-title {
+        font-size: 1.25em;
+    }
+
+    .product-price {
+        font-size: 1em;
+    }
+
+    .cantidad {
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+
+    .carrito {
+        justify-content: center;
+    }
+}

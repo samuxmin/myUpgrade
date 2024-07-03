@@ -1,0 +1,43 @@
+.bdg-title {
+  text-align: center;
+  font-size: 2em;
+  margin: 10px;
+  color: #ffffff;
+}
+
+.badges {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+.badge {
+  width: 250px;
+  height: 250px;
+  font-family: Helvetica, serif;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  text-align: center;
+  background-image: url("https://grapesjs.com/img/bg-gr-v.png"),
+                    url("https://media.extron.com/public/landing/content/esports/equipment_1.jpg");
+  align-items: center;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estilo cuando se hace hover sobre la clase badge */
+.badge:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Estilo para las imágenes dentro del contenedor badge */
+.badge img {
+  max-width: 230px;
+  max-height: 200px;
+}
